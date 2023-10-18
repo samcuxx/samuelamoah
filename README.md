@@ -1,10 +1,10 @@
 <div align="center">
-<a href="https://victoreke.com"><img src="./public/logo.png" width="60px"></a>
+<a href="https://samcux.com"><img src="./public/logo.png" width="60px"></a>
 </div>
 
 <div align="center">
-<h1>victoreke.com</h1>
-<p>My personal portfolio website</p>
+<h1>samcux.com</h1>
+<p>My personal portfolio/blog website</p>
 </div>
 
 # Tech Stack
@@ -31,9 +31,9 @@ Follow this guide to get this site runnning locally:
 ### Clone Repository
 
 ```js
-git clone https://github.com/Evavic44/victoreke.com.git
+git clone https://github.com/lilyoo226/SamCux-Official.git
 
-cd victoreke.com
+cd SamCux-Official
 
 npm install
 ```
@@ -56,7 +56,7 @@ These variables come from Sanity. To get them, you need to setup your own Sanity
 Run the command below in a terminal to create a new Sanity project:
 
 ```js
-npm create sanity@latest -- --template clean --create-project "John Doe" --dataset production
+npm create sanity@latest -- --template clean --create-project "Samuel Amoah" --dataset production
 ```
 
 - **Create an account**: If you already have a Sanity account, this will automatically connect to it, if not, select a login provider from the list of options, hit `Enter` and follow the prompt to create one.
@@ -66,7 +66,7 @@ npm create sanity@latest -- --template clean --create-project "John Doe" --datas
 Once completed open up the studio directory.
 
 ```js
-cd john-doe
+cd samuel-amoah
 
 code .
 ```
@@ -121,14 +121,14 @@ npm run build
 [planetscale]: https://planetscale.com/
 [nexttheme]: https://github.com/pacocoursey/next-themes
 [reactrefractor]: https://github.com/rexxars/react-refractor
-[site]: https://victoreke.com
-[studio]: https://victoreke.com/studio
+[site]: https://sam-cux.vercel.app/
+[studio]: https://sam-cux.vercel.app/studio
 [studio-preview]: ./public/studio.png
 [site-preview]: ./public/site.png
 [env-example]: ./env.example
 [localhost]: http://localhost:3000
 [localhost-studio]: http://localhost:3000/studio
-[sanity-api]: https://github.com/Evavic44/victoreke.com/blob/d526d77b3902d6339dd3eee9e95c27b7b55f3ca9/lib/sanity.api.ts#L13-L16C3
+[sanity-api]: https://github.com/lilyoo226/SamCux-Official/blob/main/lib/sanity.api.ts
 [sanity-manage]: https://sanity.io/manage
 [sanity-guide]: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs
-# SamCux-Official
+

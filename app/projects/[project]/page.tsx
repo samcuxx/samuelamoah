@@ -23,13 +23,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${project.name} | Project`,
-    metadataBase: new URL(`https://victoreke.com/projects/${project.slug}`),
+    metadataBase: new URL(
+      `https://sam-cux.vercel.app/projects/${project.slug}`
+    ),
     description: project.tagline,
     openGraph: {
       images:
         urlFor(project.coverImage?.image).width(1200).height(630).url() ||
         fallbackImage,
-      url: `https://victoreke.com/projects/${project.slug}`,
+      url: `https://sam-cux.vercel.app/projects/${project.slug}`,
       title: project.name,
       description: project.tagline,
     },

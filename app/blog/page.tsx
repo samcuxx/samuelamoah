@@ -5,13 +5,13 @@ import Social from "../components/shared/Social";
 import { Slide } from "../animation/Slide";
 
 export const metadata: Metadata = {
-  title: "Blog | Victor Eke",
-  metadataBase: new URL("https://victoreke.com/blog"),
-  description: "Read latest stories from Victor Eke's Blog",
+  title: "Blog | Samuel Amoah",
+  metadataBase: new URL("https://sam-cux.vercel.app/blog"),
+  description: "Read latest stories from Samuel Amoah's Blog",
   openGraph: {
-    title: "Blog | Victor Eke",
-    url: "https://victoreke.com/blog",
-    description: "Read latest stories from Victor Eke's Blog",
+    title: "Blog | Samuel Amoah",
+    url: "https://sam-cux.vercel.app/blog",
+    description: "Read latest stories from Samuel Amoah's Blog",
     images:
       "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png",
   },

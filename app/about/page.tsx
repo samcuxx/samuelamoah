@@ -10,13 +10,13 @@ import Usage from "../components/pages/Usage";
 import { Slide } from "../animation/Slide";
 
 export const metadata: Metadata = {
-  title: "About | Victor Eke",
-  metadataBase: new URL("https://victoreke.com/about"),
+  title: "About | Samuel Amoah",
+  metadataBase: new URL("https://sam-cux.vercel.app/about"),
   description:
     "Learn more about my skills, experience and technical background",
   openGraph: {
-    title: "About | Victor Eke",
-    url: "https://victoreke.com/about",
+    title: "About | Samuel Amoah",
+    url: "https://sam-cux.vercel.app/about",
     description:
       "Learn more about my skills, experience and technical background",
     images:
@@ -28,19 +28,19 @@ export default async function About() {
   const profile: ProfileType[] = await getProfile();
 
   return (
-    <main className="relative lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6">
+    <main className="relative max-w-3xl px-6 mx-auto lg:max-w-7xl md:px-16">
       {profile &&
         profile.map((data) => (
           <div key={data._id}>
-            <section className="relative grid lg:grid-cols-custom grid-cols-1 gap-x-6 justify-items-center">
+            <section className="relative grid grid-cols-1 lg:grid-cols-custom gap-x-6 justify-items-center">
               <div className="order-2 lg:order-none">
                 <Slide>
-                  <h1 className="font-incognito font-black tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
+                  <h1 className="mb-8 text-3xl font-black tracking-tight font-incognito sm:text-5xl lg:leading-tight basis-1/2">
                     I&apos;m {data.fullName}. I live in {data.location}, where I
                     build the future.
                   </h1>
 
-                  <div className="dark:text-zinc-400 text-zinc-600 leading-relaxed">
+                  <div className="leading-relaxed dark:text-zinc-400 text-zinc-600">
                     <PortableText
                       value={data.fullBio}
                       components={CustomPortableText}
@@ -49,11 +49,11 @@ export default async function About() {
                 </Slide>
               </div>
 
-              <aside className="flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12">
+              <aside className="flex flex-col order-none mb-12 lg:justify-self-center justify-self-start gap-y-8 lg:order-1">
                 <Slide delay={0.1}>
                   <div className="sticky top-10">
                     <Image
-                      className="rounded-2xl mb-4 object-cover max-h-96 min-h-96 bg-top"
+                      className="object-cover mb-4 bg-top rounded-2xl max-h-96 min-h-96"
                       src={data.profileImage.image}
                       width={400}
                       height={400}

@@ -7,13 +7,13 @@ import EmptyState from "../components/shared/EmptyState";
 import { Slide } from "../animation/Slide";
 
 export const metadata: Metadata = {
-  title: "Project | Victor Eke",
-  metadataBase: new URL("https://victoreke.com/projects"),
-  description: "Explore projects built by Victor Eke",
+  title: "Project | Samuel Amoah",
+  metadataBase: new URL("https://sam-cux.vercel.app/projects"),
+  description: "Explore projects built by Samuel Amoah",
   openGraph: {
-    title: "Projects | Victor Eke",
-    url: "https://victoreke.com/projects",
-    description: "Explore projects built by Victor Eke",
+    title: "Projects | Samuel Amoah",
+    url: "https://sam-cux.vercel.app/projects",
+    description: "Explore projects built by Samuel Amoah",
     images:
       "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png",
   },

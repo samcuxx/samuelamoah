@@ -23,6 +23,8 @@ export const apiVersion =
 export const previewSecretId = process.env
 .SANITY_REVALIDATE_SECRET as string;
 
+// See the app/api/revalidate/route.ts for how this is used
+export const revalidateSecret = process.env.SANITY_REVALIDATE_SECRET
 // Validate env varaibles
 function checkValue<T>(value: T | undefined, errorMsg: string): T {
   if (value === undefined) {

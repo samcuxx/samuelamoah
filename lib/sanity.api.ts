@@ -18,13 +18,6 @@ export const token = checkValue(
 export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2023-07-21";
 
-  // This is the document id used for the preview secret that's stored in your dataset.
-// The secret protects against unauthorized access to your draft content and have a lifetime of 60 minutes, to protect against bruteforcing.
-export const previewSecretId = process.env
-.SANITY_REVALIDATE_SECRET as string;
-
-// See the app/api/revalidate/route.ts for how this is used
-export const revalidateSecret = process.env.SANITY_REVALIDATE_SECRET
 // Validate env varaibles
 function checkValue<T>(value: T | undefined, errorMsg: string): T {
   if (value === undefined) {

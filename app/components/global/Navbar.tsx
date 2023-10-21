@@ -28,6 +28,11 @@ export default function Navbar() {
   return (
     <UnmountStudio>
       <header className="text-sm py-6 md:px-16 px-6 border-b dark:border-zinc-800 border-zinc-200 z-30 md:mb-28 mb-10">
+      <div className="blurb top-[-20%] left-[-20%]"></div>
+
+
+
+
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/">
             <Image src={Logo} width={35} height={35} alt="logo" />

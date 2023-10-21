@@ -13,12 +13,30 @@ import FeaturedPosts from "../../components/pages/FeaturedPosts";
 import { Slide } from "../../animation/Slide";
 import { urlFor } from "@/lib/sanity.image";
 import Buymeacoffee from "@/app/components/shared/Buymeacoffee";
+import client from "@/lib/sanity.client";
+
+// export const revalidate = 40;
 
 type Props = {
   params: {
     post: string;
   };
 };
+
+// TODO: Fix this
+// export async function generateStaticParams() {
+//   const query = `*[_type == "post"]
+//   {
+//     slug
+//   }`;
+//   const slugs: PostType[] = await client.fetch(query);
+//   const slugRoutes = slugs.map((slug) => ({
+//     params: {
+//       post: slug.slug,
+//     },
+//   }));
+//   return slugRoutes;
+// }
 
 const fallbackImage: string =
   "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png";

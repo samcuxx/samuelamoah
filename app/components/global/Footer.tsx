@@ -80,6 +80,7 @@ export default function Footer() {
             </small>
           </div>
         </div>
+        <div className="blurb-footer"></div>
       </footer>
     </UnmountStudio>
   );

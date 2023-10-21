@@ -52,7 +52,7 @@ export default function Navbar() {
               ))}
             </ul>
           </nav>
-
+          
           <div className="flex items-center gap-x-4">
             <Theme />
             <MobileMenu />

@@ -20,6 +20,7 @@ module.exports = {
         "secondary-bg": "rgba(250, 250, 250, 0.4)",
         "sa-bg-white":"#f1f0ee",
         "sa-bg-black":"#100F15",
+        "sa-bg-green":"#1cff42",
       },
       boxShadow: {
         "line-light": "rgba(17, 17, 26, 0.1) 0px 1px 0px",

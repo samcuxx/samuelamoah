@@ -10,7 +10,7 @@ const HomeAddons = () => {
       <section className="mt-32">
         <Slide delay={0.16}>
           <div className="mb-16">
-            <h2 className="font-incognito text-4xl mb-4 font-bold tracking-tight">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight font-incognito">
               My Projects
             </h2>
           </div>
@@ -22,12 +22,12 @@ const HomeAddons = () => {
       <section className="mt-32">
         <Slide delay={0.16}>
           <div className="mb-16">
-            <h2 className="font-incognito text-4xl mb-4 font-bold tracking-tight">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight font-incognito">
               My Featured Posts
             </h2>
           </div>
         </Slide>
-        <Slide delay={0.18} className="flex gap-5">
+        <Slide delay={0.18} className="gap-5 md:flex">
           <FeaturedPosts />
         </Slide>
         <Heroes />

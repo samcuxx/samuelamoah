@@ -17,7 +17,7 @@ const ProjectList = async () => {
           <Link
             href={`/projects/${project.slug}`}
             key={project._id}
-            className="flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-4 rounded-lg"
+            className="flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-sa-bg-green hover:border-sa-bg-green p-4 rounded-lg"
           >
             <Image
               src={project.logo}

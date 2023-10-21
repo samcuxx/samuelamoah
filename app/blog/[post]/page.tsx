@@ -24,19 +24,19 @@ type Props = {
 };
 
 // TODO: Fix this
-// export async function generateStaticParams() {
-//   const query = `*[_type == "post"]
-//   {
-//     slug
-//   }`;
-//   const slugs: PostType[] = await client.fetch(query);
-//   const slugRoutes = slugs.map((slug) => ({
-//     params: {
-//       post: slug.slug,
-//     },
-//   }));
-//   return slugRoutes;
-// }
+export async function generateStaticParams() {
+  const query = `*[_type == "post"]
+  {
+    slug
+  }`;
+  const slugs: PostType[] = await client.fetch(query);
+  const slugRoutes = slugs.map((slug) => ({
+    params: {
+      post: slug.slug,
+    },
+  }));
+  return slugRoutes;
+}
 
 const fallbackImage: string =
   "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png";
@@ -94,24 +94,24 @@ export default async function Post({ params }: Props) {
   }
 
   return (
-    <main className="max-w-7xl mx-auto md:px-16 px-6">
+    <main className="px-6 mx-auto max-w-7xl md:px-16">
       <header>
-        <Slide className="relative flex items-center gap-x-2 border-b dark:border-zinc-800 border-zinc-200 pb-8">
+        <Slide className="relative flex items-center pb-8 border-b gap-x-2 dark:border-zinc-800 border-zinc-200">
           <Link
             href="/blog"
-            className="whitespace-nowrap dark:text-zinc-400 text-zinc-400 hover:dark:text-white hover:text-zinc-700 text-sm border-b dark:border-zinc-700 border-zinc-200"
+            className="text-sm border-b whitespace-nowrap dark:text-zinc-400 text-zinc-400 hover:dark:text-white hover:text-zinc-700 dark:border-zinc-700 border-zinc-200"
           >
             cd ..
           </Link>
           <BiChevronRight />
-          <p className="text-zinc-400 text-sm truncate">{post.title}</p>
+          <p className="text-sm truncate text-zinc-400">{post.title}</p>
         </Slide>
       </header>
 
       <article>
-        <Slide className="flex lg:flex-row flex-col relative" delay={0.1}>
-          <div className="min-h-full lg:border-r border-r-0 dark:border-zinc-800 border-zinc-200 basis-3/4 pt-10 pb-4 lg:pr-6 px-0">
-            <div className="flex items-center gap-x-4 text-md mb-8 dark:text-zinc-400 text-zinc-600">
+        <Slide className="relative flex flex-col lg:flex-row" delay={0.1}>
+          <div className="min-h-full px-0 pt-10 pb-4 border-r-0 lg:border-r dark:border-zinc-800 border-zinc-200 basis-3/4 lg:pr-6">
+            <div className="flex items-center mb-8 gap-x-4 text-md dark:text-zinc-400 text-zinc-600">
               <div className="flex items-center gap-x-2">
                 <BiCalendar />
                 <time dateTime={post.date ? post.date : post._createdAt}>
@@ -128,12 +128,12 @@ export default async function Post({ params }: Props) {
             <h1 className="font-incognito font-semibold tracking-tight sm:text-[2.5rem] lg:leading-none leading-tight text-3xl mb-4">
               {post.title}
             </h1>
-            <p className="dark:text-zinc-400 text-zinc-600 max-w-2xl">
+            <p className="max-w-2xl dark:text-zinc-400 text-zinc-600">
               {post.description}
             </p>
             <div className="relative w-full h-40 pt-[52.5%] mt-12">
               <Image
-                className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover"
+                className="object-cover border rounded-xl dark:border-zinc-800 border-zinc-100"
                 layout="fill"
                 src={post.coverImage?.image || fallbackImage}
                 alt={post.coverImage?.alt || post.title}
@@ -143,17 +143,17 @@ export default async function Post({ params }: Props) {
               />
             </div>
 
-            <div className="mt-8 dark:text-zinc-400 text-zinc-600 leading-relaxed tracking-tight text-lg">
+            <div className="mt-8 text-lg leading-relaxed tracking-tight dark:text-zinc-400 text-zinc-600">
               <PortableText value={post.body} components={CustomPortableText} />
             </div>
           </div>
 
-          <aside className="flex flex-col lg:max-h-full h-max gap-y-8 sticky top-2 bottom-auto right-0 basis-1/4 py-10 lg:px-6 px-0">
-            <section className="border-b dark:border-zinc-800 border-zinc-200 pb-10">
-              <p className="dark:text-zinc-400 text-zinc-500 text-sm">
+          <aside className="sticky right-0 bottom-auto flex flex-col px-0 py-10 lg:max-h-full h-max gap-y-8 top-2 basis-1/4 lg:px-6">
+            <section className="pb-10 border-b dark:border-zinc-800 border-zinc-200">
+              <p className="text-sm dark:text-zinc-400 text-zinc-500">
                 Written By
               </p>
-              <address className="flex items-center gap-x-3 mt-4 not-italic">
+              <address className="flex items-center mt-4 not-italic gap-x-3">
                 <div className="relative w-12 h-12">
                   <Image
                     src={urlFor(post.author.photo.image)
@@ -162,16 +162,16 @@ export default async function Post({ params }: Props) {
                       .url()}
                     alt={post.author.photo.alt}
                     layout="fill"
-                    className="dark:bg-zinc-800 bg-zinc-300 rounded-full object-cover"
+                    className="object-cover rounded-full dark:bg-zinc-800 bg-zinc-300"
                   />
                 </div>
                 <div rel="author">
-                  <h3 className="font-semibold text-lg tracking-tight">
+                  <h3 className="text-lg font-semibold tracking-tight">
                     {post.author.name}
                   </h3>
                   <a
                     href={post.author.twitterUrl}
-                    className="text-blue-500 text-sm"
+                    className="text-sm text-blue-500"
                     rel="noreferrer noopener"
                     target="_blank"
                   >
@@ -181,15 +181,15 @@ export default async function Post({ params }: Props) {
               </address>
             </section>
 
-            <section className="border-b dark:border-zinc-800 border-zinc-200 pb-10">
-              <h3 className="text-xl font-semibold tracking-tight mb-4">
+            <section className="pb-10 border-b dark:border-zinc-800 border-zinc-200">
+              <h3 className="mb-4 text-xl font-semibold tracking-tight">
                 Tags
               </h3>
               <ul className="flex flex-wrap items-center gap-2 tracking-tight">
                 {post.tags.map((tag, id) => (
                   <li
                     key={id}
-                    className="dark:bg-primary-bg bg-zinc-100 border dark:border-zinc-800 border-zinc-200 rounded-md px-2 py-1 text-sm"
+                    className="px-2 py-1 text-sm border rounded-md dark:bg-primary-bg bg-zinc-100 dark:border-zinc-800 border-zinc-200"
                   >
                     {tag}
                   </li>
@@ -203,8 +203,8 @@ export default async function Post({ params }: Props) {
               description={post.description}
             />
 
-            <section className="border-b dark:border-zinc-800 border-zinc-200 pb-10">
-              <h3 className="text-xl font-semibold tracking-tight mb-4">
+            <section className="pb-10 border-b dark:border-zinc-800 border-zinc-200">
+              <h3 className="mb-4 text-xl font-semibold tracking-tight">
                 Featured
               </h3>
               <FeaturedPosts params={params.post} />
@@ -213,7 +213,7 @@ export default async function Post({ params }: Props) {
         </Slide>
       </article>
 
-      <section className="max-w-3xl my-10 lg:border-t dark:border-zinc-800 border-zinc-200 lg:pt-16 pt-0">
+      <section className="max-w-3xl pt-0 my-10 lg:border-t dark:border-zinc-800 border-zinc-200 lg:pt-16">
         <Buymeacoffee />
       </section>
 

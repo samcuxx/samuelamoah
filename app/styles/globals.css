@@ -92,3 +92,52 @@ h4 {
 }
 
 /* ScrollBar  end*/
+
+
+.sahero {
+	 /* background: #082330; */
+	 background-size: 0.12em 100%;
+	 font: 16em/1 Arial;
+}
+ .text--line {
+	 font-size: 0.5em;
+}
+ .sa-svg {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+}
+ .text-copy {
+	 fill: none;
+	 stroke: white;
+	 stroke-dasharray: 7% 28%;
+	 stroke-width: 3px;
+	 animation: stroke-offset 9s infinite linear;
+}
+ .text-copy:nth-child(1) {
+	 stroke: #360745;
+	 stroke-dashoffset: 7%;
+}
+ .text-copy:nth-child(2) {
+	 stroke: #47f9d8;
+	 stroke-dashoffset: 14%;
+}
+ .text-copy:nth-child(3) {
+	 stroke: #1cff42;
+	 stroke-dashoffset: 21%;
+}
+ .text-copy:nth-child(4) {
+	 stroke: #989898;
+	 stroke-dashoffset: 28%;
+}
+ .text-copy:nth-child(5) {
+	 stroke: #45705a;
+	 stroke-dashoffset: 35%;
+}
+ @keyframes stroke-offset {
+	 50% {
+		 stroke-dashoffset: 35%;
+		 stroke-dasharray: 0 87.5%;
+	}
+}
+ 

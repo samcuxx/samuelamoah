@@ -5,12 +5,14 @@ import Job from "./components/pages/Job";
 import Social from "./components/shared/Social";
 import { Slide } from "./animation/Slide";
 import HomeAddons from "./components/home/HomeAddons";
+import SVGContainer from "./icons/SAHero";
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();
 
   return (
     <main className="px-6 mx-auto mt-20 max-w-7xl md:px-16 lg:mt-32">
+      {/* <SVGContainer viewBox="0 0 800 600"/> */}
       <section className="flex flex-col items-start justify-between mb-16 xl:flex-row xl:items-center xl:justify-center gap-x-12">
         {profile &&
           profile.map((data) => (
@@ -29,7 +31,9 @@ export default async function Home() {
             </div>
           ))}
         <Slide delay={0.14}>
-          <HeroSvg />
+          {/* <HeroSvg /> */}
+      <SVGContainer viewBox="0 0 800 600"/>
+
         </Slide>
         <div className="blurb-1 bottom-[-20%] right-[10%]"></div>
       </section>

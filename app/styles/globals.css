@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 @import "prism.css";
-
+html{
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
 body {
   background-image: url("../../public/noise.png");
   background-size: 200px 200px;

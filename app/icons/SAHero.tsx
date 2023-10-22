@@ -6,7 +6,7 @@ interface SvgContainerProps {
 
 const SvgContainer: React.FC<SvgContainerProps> = ({ viewBox }) => {
   return (
-    <div className="sahero lg:w-[450px] lg:h-[450px] w-full h-full">
+    <div className="sahero lg:w-[450px] lg:h-[450px] w-full h-full pointer-events-none select-none">
         
     <svg className="lg:w-[450px] lgl:h-[450px] w-full h-full"  viewBox={viewBox}>
       <symbol id="s-text">

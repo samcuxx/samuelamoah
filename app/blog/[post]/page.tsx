@@ -24,19 +24,19 @@ type Props = {
 };
 
 // TODO: Fix this
-export async function generateStaticParams() {
-  const query = `*[_type == "post"]
-  {
-    slug
-  }`;
-  const slugs: PostType[] = await client.fetch(query);
-  const slugRoutes = slugs.map((slug) => ({
-    params: {
-      post: slug.slug,
-    },
-  }));
-  return slugRoutes;
-}
+// export async function generateStaticParams() {
+//   const query = `*[_type == "post"]
+//   {
+//     slug
+//   }`;
+//   const slugs: PostType[] = await client.fetch(query);
+//   const slugRoutes = slugs.map((slug) => ({
+//     params: {
+//       post: slug.slug,
+//     },
+//   }));
+//   return slugRoutes;
+// }
 
 const fallbackImage: string =
   "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png";

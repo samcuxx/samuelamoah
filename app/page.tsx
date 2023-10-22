@@ -1,10 +1,10 @@
 import { getProfile } from "@/lib/sanity.query";
 import type { ProfileType } from "@/types";
-import HeroSvg from "./icons/HeroSvg";
+// import HeroSvg from "./icons/HeroSvg";
 import Job from "./components/pages/Job";
 import Social from "./components/shared/Social";
 import { Slide } from "./animation/Slide";
-import HomeAddons from "./components/home/HomeAddons";
+// import HomeAddons from "./components/home/HomeAddons";
 import SVGContainer from "./icons/SAHero";
 
 export default async function Home() {
@@ -38,7 +38,7 @@ export default async function Home() {
         <div className="blurb-1 bottom-[-20%] right-[10%]"></div>
       </section>
       <Job />
-      <HomeAddons/>
+      {/* <HomeAddons/> */}
     </main>
   );
 }

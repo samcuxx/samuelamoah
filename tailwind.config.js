@@ -31,7 +31,7 @@ module.exports = {
       },
       backgroundImage: {
         noise:
-          "url('https://res.cloudinary.com/victoreke/image/upload/v1691779257/victoreke/noise.png')",
+          "url('https://res.cloudinary.com/samuelamoah/image/upload/v1697976914/Samuel%20Amoah/igvooopdjw4oq4f90iuo.png')",
       },
       backgroundPosition: {
         zero: "0 0",

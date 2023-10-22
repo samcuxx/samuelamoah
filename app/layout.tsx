@@ -19,7 +19,7 @@ const options = {
     "Samuel Amoah is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
   url: "https://sam-cux.vercel.app/",
   ogImage:
-    "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
+    "https://res.cloudinary.com/samuelamoah/image/upload/v1697974021/Samuel%20Amoah/tg4mekbqxol1nbdzxy7l.jpg",
 };
 
 export const metadata: Metadata = {

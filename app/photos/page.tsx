@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://sam-cux.vercel.app/photos",
     description: "Explore photos taken by Samuel Amoah",
     images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692635149/victoreke/photos.png",
+      "https://res.cloudinary.com/samuelamoah/image/upload/v1697975913/Samuel%20Amoah/ueccqo5ha4opguuxvcwp.jpg",
   },
 };
 

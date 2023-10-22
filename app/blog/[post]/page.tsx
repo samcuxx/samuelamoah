@@ -39,7 +39,7 @@ type Props = {
 // }
 
 const fallbackImage: string =
-  "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png";
+  "https://res.cloudinary.com/samuelamoah/image/upload/v1697975302/Samuel%20Amoah/vczdsywwhyhzoduglkid.jpg";
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -67,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       type: "article",
-      siteName: "victoreke.com",
+      siteName: "samuelamoah.com",
       authors: post.author.name,
       tags: post.tags,
       publishedTime: post._createdAt,

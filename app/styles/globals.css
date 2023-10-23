@@ -1,30 +1,29 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import "prism.css";
-html{
+html {
+  @apply scroll-smooth;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
 }
 body {
-  background-image: url("../../public/noise.png");
-  background-size: 200px 200px;
-  background-position: 0 0;
+  @apply bg-[url("../../public/noise.png")] bg-[200px_200px] bg-[0_0];
 }
-
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--incognito), "Inter", sans-serif;
 }
-
 .path {
+  @apply animate-[animate_100s_linear_infinite_alternate-reverse];
   stroke-dasharray: 500px 100px;
-  animation: animate 100s linear infinite alternate-reverse;
 }
-
 @keyframes animate {
   from {
     stroke-dashoffset: 0;
@@ -34,110 +33,80 @@ h4 {
   }
 }
 
-
-
-
 /* Homie */
 /* Background Colors Start */
 .blurb {
-  z-index: -1;
-  width: 40%;
-  height: 20rem;
-  filter: blur(15rem);
-  background-image: linear-gradient(30deg, #47f9f3, #1cff42);
-  position: absolute;
+  @apply z-[-1] w-2/5 h-80 blur-[15rem] bg-[linear-gradient(30deg,#47f9f3,#1cff42)] absolute;
 }
 .blurb-1 {
-  z-index: -1;
-  width: 10%;
-  height: 10rem;
-  filter: blur(7rem);
-  background-image: linear-gradient(30deg, #47f9f3, #1cff42);
-  position: absolute;
+  @apply z-[-1] w-[10%] h-40 blur-[7rem] bg-[linear-gradient(30deg,#47f9f3,#1cff42)] absolute;
 }
 .blurb-footer {
-  z-index: -1;
-  width: 30%;
-  height: 20rem;
-  filter: blur(50rem);
-  background-image: linear-gradient(30deg, #47f9f3, #1cff42);
-  position: absolute;
-  bottom: 50%;
+  @apply z-[-1] w-[30%] h-80 blur-[50rem] bg-[linear-gradient(30deg,#47f9f3,#1cff42)] absolute bottom-2/4;
 }
 
 /* Background Colors End */
-
-
-
-
 
 /* ScrollBar  Start*/
 
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  @apply w-[7px];
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 5px grey; */
-  /* border-radius: 10px; */
-}
+/* ::-webkit-scrollbar-track { */
+/* box-shadow: inset 0 0 5px grey; */
+/* border-radius: 10px; */
+/* } */
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  @apply bg-[linear-gradient(30deg,#47f9f3,#1cff42)] rounded-[100%];
+
   /* background: red; */
-  background-image: linear-gradient(30deg, #47f9f3, #1cff42);
-  border-radius: 100%;
 }
 
 /* ScrollBar  end*/
-
-
 .sahero {
-	 /* background: #082330; */
-	 background-size: 0.12em 100%;
-	 font: 16em/1 Arial;
+  @apply bg-[0.12em_100%];
+
+  /* background: #082330; */
+  font: 16em/1 Arial;
 }
- .text--line {
-	 font-size: 0.5em;
+.text--line {
+  @apply text-[0.5em];
 }
- .sa-svg {
-	 position: absolute;
-	 width: 100%;
-	 height: 100%;
+.sa-svg {
+  @apply absolute w-full h-full;
 }
- .text-copy {
-	 fill: none;
-	 stroke: white;
-	 stroke-dasharray: 7% 28%;
-	 stroke-width: 3px;
-	 animation: stroke-offset 9s infinite linear;
+.text-copy {
+  @apply fill-none stroke-[white] stroke-[3px] animate-[stroke-offset_9s_infinite_linear];
+  stroke-dasharray: 7% 28%;
 }
- .text-copy:nth-child(1) {
-	 stroke: #360745;
-	 stroke-dashoffset: 7%;
+.text-copy:nth-child(1) {
+  @apply stroke-[#360745];
+  stroke-dashoffset: 7%;
 }
- .text-copy:nth-child(2) {
-	 stroke: #47f9d8;
-	 stroke-dashoffset: 14%;
+.text-copy:nth-child(2) {
+  @apply stroke-[#47f9d8];
+  stroke-dashoffset: 14%;
 }
- .text-copy:nth-child(3) {
-	 stroke: #1cff42;
-	 stroke-dashoffset: 21%;
+.text-copy:nth-child(3) {
+  @apply stroke-[#1cff42];
+  stroke-dashoffset: 21%;
 }
- .text-copy:nth-child(4) {
-	 stroke: #989898;
-	 stroke-dashoffset: 28%;
+.text-copy:nth-child(4) {
+  @apply stroke-[#989898];
+  stroke-dashoffset: 28%;
 }
- .text-copy:nth-child(5) {
-	 stroke: #45705a;
-	 stroke-dashoffset: 35%;
+.text-copy:nth-child(5) {
+  @apply stroke-[#45705a];
+  stroke-dashoffset: 35%;
 }
- @keyframes stroke-offset {
-	 50% {
-		 stroke-dashoffset: 35%;
-		 stroke-dasharray: 0 87.5%;
-	}
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
 }
- 

@@ -1,11 +1,11 @@
 import { getProfile } from "@/lib/sanity.query";
 import type { ProfileType } from "@/types";
-// import HeroSvg from "./icons/HeroSvg";
+import HeroSvg from "./icons/HeroSvg";
 import Job from "./components/pages/Job";
 import Social from "./components/shared/Social";
 import { Slide } from "./animation/Slide";
 // import HomeAddons from "./components/home/HomeAddons";
-import SVGContainer from "./icons/SAHero";
+// import SVGContainer from "./icons/SAHero";
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();
@@ -31,8 +31,8 @@ export default async function Home() {
             </div>
           ))}
         <Slide delay={0.14}>
-          {/* <HeroSvg /> */}
-      <SVGContainer viewBox="0 0 800 600"/>
+          <HeroSvg />
+      {/* <SVGContainer viewBox="0 0 800 600"/> */}
 
         </Slide>
         <div className="blurb-1 bottom-[-20%] right-[10%]"></div>

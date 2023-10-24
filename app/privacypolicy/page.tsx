@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 
+
+
 const PrivacyPolicy = () => {
     return (
       <div className="max-w-3xl mx-auto my-8">

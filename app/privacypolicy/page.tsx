@@ -5,6 +5,7 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
     return (
+      <>
       <div className="max-w-3xl mx-auto my-8">
       <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
       <p className="mb-4"> <span className="font-bold">Effective Date:</span> October 24, 2023</p>
@@ -57,7 +58,7 @@ const PrivacyPolicy = () => {
     
       <h2 className="text-xl font-bold mt-8 mb-4">Contact us</h2>
       <p>If you have any questions about this privacy policy, please contact us at sa.devwin@gmail.com. </p>
-    </div>
+    </div></>
     
     );
 };

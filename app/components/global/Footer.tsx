@@ -3,6 +3,7 @@ import sanitylogo from "@/public/sanity.png";
 import vercellogo from "@/public/vercel.svg";
 import nextjslogo from "@/public/nextjs.svg";
 import UnmountStudio from "./Unmount";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -74,6 +75,9 @@ export default function Footer() {
               Stars <em className="not-italic text-primary-color">3,329</em>
             </a> */}
 
+            <small className="text-zinc-500">
+            <Link href="/privacypolicy">Privacy Policy</Link>
+            </small>
             <small className="text-zinc-500">
               Copyright &copy; Samuel Amoah {new Date().getFullYear()} All
               rights Reserved

@@ -63,7 +63,8 @@ export default function RootLayout({
         src="https://analytics.eu.umami.is/script.js"
         data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID || ""}
       />
-      
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5234293399921884"
+     crossOrigin="anonymous"></script>
     </html>
   );
 }

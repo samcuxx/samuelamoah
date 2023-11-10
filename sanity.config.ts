@@ -6,8 +6,8 @@ import { codeInput } from "@sanity/code-input";
 import { projectId, dataset } from "./lib/sanity.api";
 
 export default defineConfig({
-  name: "SamCux",
-  title: "SamCux",
+  name: "Samuel Amoah",
+  title: "Samuel Amoah",
   basePath: "/studio",
   projectId,
   dataset,

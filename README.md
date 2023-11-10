@@ -1,9 +1,9 @@
 <div align="center">
-<a href="https://samcux.com"><img src="./public/logo.png" width="60px"></a>
+<a href="https://samuelamoah.com"><img src="./public/logo.png" width="60px"></a>
 </div>
 
 <div align="center">
-<h1>samcux.com</h1>
+<h1>samuelamoah.com</h1>
 <p>My personal portfolio/blog website</p>
 </div>
 
@@ -31,9 +31,9 @@ Follow this guide to get this site runnning locally:
 ### Clone Repository
 
 ```js
-git clone https://github.com/lilyoo226/SamCux-Official.git
+git clone https://github.com/lilyoo226/Samuel Amoah-Official.git
 
-cd SamCux-Official
+cd Samuel Amoah-Official
 
 npm install
 ```
@@ -128,7 +128,7 @@ npm run build
 [env-example]: ./env.example
 [localhost]: http://localhost:3000
 [localhost-studio]: http://localhost:3000/studio
-[sanity-api]: https://github.com/lilyoo226/SamCux-Official/blob/main/lib/sanity.api.ts
+
+[sanity-api]: https://github.com/lilyoo226/Samuel Amoah-Official/blob/main/lib/sanity.api.ts
 [sanity-manage]: https://sanity.io/manage
 [sanity-guide]: https://www.freecodecamp.org/news/how-to-build-a-portfolio-site-with-sanity-and-nextjs
-

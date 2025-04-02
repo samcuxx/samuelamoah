@@ -13,7 +13,8 @@ import html from "refractor/lang/markup";
 import yaml from "refractor/lang/yaml";
 import graphql from "refractor/lang/graphql";
 import json from "refractor/lang/json";
-import { BiCopy } from "react-icons/bi";
+import java from "refractor/lang/java";
+import Clipoboard from "./Clipoboard";
 
 // Supported languages: https://prismjs.com/#supported-languages
 Refractor.registerLanguage(js);
@@ -30,6 +31,7 @@ Refractor.registerLanguage(html);
 Refractor.registerLanguage(yaml);
 Refractor.registerLanguage(graphql);
 Refractor.registerLanguage(json);
+Refractor.registerLanguage(java);
 
 type codeTypes = {
   value: {
@@ -40,24 +42,14 @@ type codeTypes = {
 };
 
 export default function CodeBlock({ value }: codeTypes) {
-  // Hide react defaultProps error on Refractor. Ref: https://github.com/reactjs/rfcs/pull/107
-  const error = console.error;
-  console.error = (...args: any) => {
-    if (/defaultProps/.test(args[0])) return;
-    error(...args);
-  };
-
   return (
     <div className="my-6">
       <div className="flex items-center justify-between bg-zinc-50 dark:bg-[#141414] border dark:border-zinc-800 border-zinc-200 rounded-t-lg px-4 py-3 translate-y-2">
-        <p className="text-sm">{value.filename || ""}</p>
-        <button>
-          <BiCopy />
-        </button>
-        {/* // TODO: Implement copy code to clipboard feature */}
+        {value.filename && <p className="text-sm">{value.filename}</p>}
+        <Clipoboard content={value.code} />
       </div>
       <Refractor
-        language={value.language ? value.language : "jsx"}
+        language={value.language ?? "jsx"}
         value={value.code}
         className="text-sm border-x border-b dark:border-zinc-800 border-zinc-200 rounded-b-lg tracking-normal"
       />

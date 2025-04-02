@@ -3,11 +3,25 @@ import { BiLinkExternal, BiSolidQuoteRight } from "react-icons/bi";
 import PortableImage from "./PortableImage";
 import CodeBlock from "./CodeBlock";
 import HashScroll from "./HashScroll";
+import getYoutubeId from "@/app/utils/get-youtubeId";
+import YoutubeIframe from "./YoutubeIframe";
+import RefLink from "./RefLink";
+import Table from "./Table";
+import { QuizValueProps, TableValueProps } from "@/types";
+import Quiz from "./Quiz";
 
 export const CustomPortableText: PortableTextComponents = {
   types: {
     image: PortableImage,
     code: CodeBlock,
+    youtube: ({ value }: { value: { url: string } }) => {
+      const id = getYoutubeId(value.url);
+      return <YoutubeIframe videoId={id} />;
+    },
+    customTable: ({ value }: { value: TableValueProps }) => (
+      <Table value={value} />
+    ),
+    quiz: ({ value }: { value: QuizValueProps }) => <Quiz value={value} />,
   },
 
   block: {
@@ -63,9 +77,7 @@ export const CustomPortableText: PortableTextComponents = {
   },
   marks: {
     em: ({ children }) => (
-      <em className="font-incognito font-semibold dark:text-primary-color text-tertiary-color">
-        {children}
-      </em>
+      <em className="font-incognito font-medium italic">{children}</em>
     ),
     strong: ({ children }) => (
       <strong className="font-bold dark:text-zinc-300 text-zinc-700">
@@ -74,14 +86,12 @@ export const CustomPortableText: PortableTextComponents = {
     ),
     link: ({ children, value }) => {
       return (
-        <a
-          className="dark:text-blue-400 text-blue-500 hover:underline"
+        <RefLink
           href={value?.href}
-          rel="noreferrer noopener"
-          target="_blank"
+          className="dark:text-blue-400 text-blue-500 hover:underline"
         >
           {children} <BiLinkExternal className="inline" aria-hidden="true" />
-        </a>
+        </RefLink>
       );
     },
     code: ({ children }) => (

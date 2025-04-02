@@ -3,16 +3,15 @@ import sanitylogo from "@/public/sanity.png";
 import vercellogo from "@/public/vercel.svg";
 import nextjslogo from "@/public/nextjs.svg";
 import UnmountStudio from "./Unmount";
-import Link from "next/link";
 
 export default function Footer() {
   return (
     <UnmountStudio>
       <footer className="border-t dark:border-zinc-800 border-zinc-100 mt-44 lg:min-h-[250px] min-h-full relative">
-        <div className="flex flex-col items-center justify-center px-6 py-16 mx-auto max-w-7xl lg:flex-row lg:justify-between gap-y-4 md:px-16">
-          <div className="flex flex-col items-center md:flex-row gap-x-2">
+        <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-center lg:justify-between justify-center gap-y-4 md:px-16 px-6 py-16">
+          <div className="flex md:flex-row flex-col items-center gap-x-2">
             <h3 className="font-inter">Built with:</h3>
-            <ul className="flex items-center mt-3 text-sm gap-x-2 dark:text-zinc-600 text-zinc-400 md:mt-0">
+            <ul className="flex items-center gap-x-2 text-sm dark:text-zinc-600 text-zinc-400 md:mt-0 mt-3">
               <li>
                 <a
                   href="https://sanity.io"
@@ -64,27 +63,23 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center text-center lg:items-end lg:text-start">
+          <div className="flex flex-col lg:items-end items-center lg:text-start text-center">
             {/* <a
-              className="flex items-center justify-center px-4 py-2 mb-3 font-bold tracking-tight text-center border border-transparent rounded-md gap-x-2 dark:bg-primary-bg bg-zinc-100 dark:hover:border-zinc-700 hover:border-zinc-200"
-              href="https://github.com/Evavic44/lilyoo.com"
+              className="flex items-center justify-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 rounded-md py-2 px-4 text-center mb-3    font-bold tracking-tight"
+              href="https://github.com/Evavic44/victoreke.com"
               target="_blank"
               rel="noreferrer noopener"
             >
               <BiLogoGithub />
-              Stars <em className="not-italic text-primary-color">3,329</em>
+              Stars <em className="text-primary-color not-italic">3,329</em>
             </a> */}
 
             <small className="text-zinc-500">
-            <Link href="/privacypolicy">Privacy Policy</Link>
-            </small>
-            <small className="text-zinc-500">
-              Copyright &copy; Samuel Amoah {new Date().getFullYear()} All
-              rights Reserved
+              Copyright &copy; Victor Eke {new Date().getFullYear()} All rights
+              Reserved
             </small>
           </div>
         </div>
-        <div className="blurb-footer"></div>
       </footer>
     </UnmountStudio>
   );

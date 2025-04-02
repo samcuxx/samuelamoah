@@ -60,44 +60,7 @@ const profile = {
     defineField({
       name: "fullBio",
       title: "Full Bio",
-      type: "array",
-      of: [
-        {
-          type: "block",
-          styles: [
-            { title: "Normal", value: "normal" },
-            { title: "H1", value: "h1" },
-            { title: "H2", value: "h2" },
-            { title: "H3", value: "h3" },
-            { title: "Quote", value: "blockquote" },
-          ],
-          marks: {
-            decorators: [
-              { title: "Strong", value: "strong" },
-              { title: "Emphasis", value: "em" },
-              { title: "Code", value: "code" },
-            ],
-          },
-        },
-        {
-          type: "image",
-          options: { hotspot: true },
-          fields: [
-            {
-              name: "caption",
-              title: "Image caption",
-              type: "string",
-              description: "Text displayed below the image.",
-            },
-            {
-              name: "alt",
-              title: "Alt text",
-              type: "string",
-              description: "Important for SEO and accessiblity.",
-            },
-          ],
-        },
-      ],
+      type: "blockContent",
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -106,71 +69,10 @@ const profile = {
       type: "file",
       validation: (rule) => rule.required(),
     }),
-    // defineField({
-    //   name: "socialLinks",
-    //   title: "Social Links",
-    //   type: "object",
-    //   description: "Add your social media links:",
-    //   fields: [
-    //     {
-    //       name: "github",
-    //       title: "Github URL",
-    //       type: "url",
-    //       initialValue: "https://github.com/",
-    //     },
-    //     {
-    //       name: "linkedin",
-    //       title: "Linkedin URL",
-    //       type: "url",
-    //       initialValue: "https://linkedin.com/in/",
-    //     },
-    //     {
-    //       name: "twitter",
-    //       title: "Twitter URL",
-    //       type: "url",
-    //       initialValue: "https://twitter.com/",
-    //     },
-    //     {
-    //       name: "codepen",
-    //       title: "Codepen URL",
-    //       type: "url",
-    //       initialValue: "https://codepen.io/",
-    //     },
-    //   ],
-    //   options: {
-    //     collapsed: false,
-    //     collapsible: true,
-    //     columns: 2,
-    //   },
-    //   validation: (rule) => rule.required(),
-    // }),
-    // defineField({
-    //   name: "skills",
-    //   title: "Skills",
-    //   type: "array",
-    //   description: "Add a list of skills",
-    //   of: [{ type: "string" }],
-    //   validation: (rule) => rule.required(),
-    // }),
     defineField({
       name: "usage",
       title: "Usage",
-      type: "array",
-      of: [
-        {
-          type: "block",
-          styles: [
-            { title: "Normal", value: "normal" },
-            { title: "H3", value: "h3" },
-          ],
-          marks: {
-            decorators: [
-              { title: "Strong", value: "strong" },
-              { title: "Code", value: "code" },
-            ],
-          },
-        },
-      ],
+      type: "blockContent",
       validation: (rule) => rule.required(),
     }),
   ],

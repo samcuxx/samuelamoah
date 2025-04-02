@@ -18,9 +18,6 @@ module.exports = {
         "tertiary-color": "#16a34a",
         "primary-bg": "rgba(39, 39, 43, 0.4)",
         "secondary-bg": "rgba(250, 250, 250, 0.4)",
-        "sa-bg-white":"#f1f0ee",
-        "sa-bg-black":"#100F15",
-        "sa-bg-green":"#1cff42",
       },
       boxShadow: {
         "line-light": "rgba(17, 17, 26, 0.1) 0px 1px 0px",
@@ -29,9 +26,13 @@ module.exports = {
       gridTemplateColumns: {
         custom: "1.2fr 1fr",
       },
+      gridTemplateRows: {
+        fit: "min-content 0fr",
+        full: "min-content 1fr",
+      },
       backgroundImage: {
         noise:
-          "url('https://res.cloudinary.com/samuelamoah/image/upload/v1697976914/Samuel%20Amoah/igvooopdjw4oq4f90iuo.png')",
+          "url('https://res.cloudinary.com/victoreke/image/upload/v1691779257/victoreke/noise.png')",
       },
       backgroundPosition: {
         zero: "0 0",

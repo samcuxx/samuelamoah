@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PortableTextComponents } from "@portabletext/react";
 import Favicon from "../../utils/favicon";
-import { BiLinkExternal } from "react-icons/bi";
+import RefLink from "./RefLink";
 
 export const CustomPortableTextFavicon: PortableTextComponents = {
   block: {
@@ -19,19 +19,13 @@ export const CustomPortableTextFavicon: PortableTextComponents = {
   marks: {
     link: ({ children, value }) => {
       return (
-        <a
-          className="font-medium inline-flex items-center justify-start gap-x-1 dark:text-blue-400 text-blue-500 underline"
+        <RefLink
           href={value?.href}
-          rel="noreferrer noopener"
-          target="_blank"
+          className="font-medium inline-flex items-center justify-start gap-x-1 dark:text-blue-400 text-blue-500 underline"
         >
-          {value?.href ? (
-            <Favicon domain={value?.href} alt={value?.href} />
-          ) : (
-            <BiLinkExternal />
-          )}
+          <Favicon domain={value?.href} alt={value?.href} />
           {children}
-        </a>
+        </RefLink>
       );
     },
   },

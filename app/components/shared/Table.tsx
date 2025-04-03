@@ -17,7 +17,7 @@ export default function Table({ value }: { value: TableValueProps }) {
   return (
     <table className="border dark:border-zinc-800 border-zinc-200 w-full text-base my-4">
       {caption && (
-        <caption className="text-lg font-incognito font-medium my-1">
+        <caption className="text-lg font-gonzaga font-medium my-1">
           {caption}
         </caption>
       )}
@@ -27,7 +27,7 @@ export default function Table({ value }: { value: TableValueProps }) {
             <th
               key={heading}
               scope="col"
-              className="font-medium text-lg font-incognito px-3 py-2"
+              className="font-medium text-lg font-gonzaga px-3 py-2"
             >
               {heading}
             </th>

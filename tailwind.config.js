@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         incognito: ["var(--incognito)"],
         inter: ["var(--inter)"],
+        gonzaga: ["var(--gonzaga)"],
       },
       colors: {
         "primary-color": "#33E092",

@@ -66,7 +66,7 @@ export default function Footer() {
           <div className="flex flex-col lg:items-end items-center lg:text-start text-center">
             {/* <a
               className="flex items-center justify-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 rounded-md py-2 px-4 text-center mb-3    font-bold tracking-tight"
-              href="https://github.com/Evavic44/victoreke.com"
+              href="https://github.com/Evavic44/samcux.com"
               target="_blank"
               rel="noreferrer noopener"
             >

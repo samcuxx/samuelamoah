@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { incognito } from "./assets/font/font";
 import { gitlabmono } from "./assets/font/font";
+import { gonzaga } from "./assets/font/font";
 import Navbar from "./components/global/Navbar";
 import Footer from "./components/global/Footer";
 import { Providers } from "./providers";
@@ -18,7 +19,7 @@ const options = {
   title: "Victor Eke | Software Developer",
   description:
     "Victor Eke is a Software Developer and Technical Writer who is passionate about building solutions and contributing to open source communities",
-  url: "https://victoreke.com",
+  url: "https://samcux.com",
   ogImage:
     "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
 };
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: options.title,
     url: options.url,
-    siteName: "victoreke.com",
+    siteName: "samcux.com",
     locale: "en-US",
     type: "website",
     description: options.description,
@@ -52,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
+        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} ${gonzaga.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
       >
         <Providers>
           <Navbar />

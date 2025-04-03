@@ -13,12 +13,12 @@ import RefLink from "../components/shared/RefLink";
 
 export const metadata: Metadata = {
   title: "About | Victor Eke",
-  metadataBase: new URL("https://victoreke.com/about"),
+  metadataBase: new URL("https://samcux.com/about"),
   description:
     "Learn more about my skills, experience and technical background",
   openGraph: {
     title: "About | Victor Eke",
-    url: "https://victoreke.com/about",
+    url: "https://samcux.com/about",
     description:
       "Learn more about my skills, experience and technical background",
     images:
@@ -38,7 +38,7 @@ export default async function About() {
         <section className="relative grid lg:grid-cols-custom grid-cols-1 gap-x-6 justify-items-center">
           <div className="order-2 lg:order-none">
             <Slide>
-              <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
+              <h1 className="font-gonzaga font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
                 I&apos;m {profile?.fullName ?? "John Doe"}. I live in{" "}
                 {profile?.location ?? "'X'"}, where I build the future.
               </h1>
@@ -79,7 +79,7 @@ export default async function About() {
                   <div className="flex items-center gap-x-3">
                     <RefLink
                       href="https://www.craft.me/s/WQpQF3jrPIodXp"
-                      className="flex items-center justify-center text-center gap-x-2 basis-[90%] dark:bg-primary-bg bg-zinc-100 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 rounded-md py-2 text-lg font-incognito font-semibold"
+                      className="flex items-center justify-center text-center gap-x-2 basis-[90%] dark:bg-primary-bg bg-zinc-100 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 rounded-md py-2 text-lg font-gonzaga font-semibold"
                     >
                       View Résumé <BiLinkExternal className="text-base" />
                     </RefLink>

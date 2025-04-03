@@ -40,7 +40,7 @@ export default async function Heroes() {
             <EasterEgg isMet={heroe.met} />
             <RefLink
               href={heroe.url}
-              className={`font-incognito tracking-wide hover:underline ${
+              className={`font-gonzaga tracking-wide hover:underline ${
                 heroe.met && "dark:text-green-300 text-green-800"
               }`}
             >

@@ -53,3 +53,30 @@ export const gitlabmono = localFont({
   variable: "--gitlabmono",
   display: "swap",
 });
+
+export const gonzaga = localFont({
+  src: [
+    {
+      path: "Gonzaga-bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "Gonzaga-regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "Gonzaga-medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "Gonzaga-extrabold.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--gonzaga",
+  display: "swap",
+});

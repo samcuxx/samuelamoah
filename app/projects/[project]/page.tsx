@@ -29,13 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${project.name} | Project`,
-    metadataBase: new URL(`https://victoreke.com/projects/${project.slug}`),
+    metadataBase: new URL(`https://samcux.com/projects/${project.slug}`),
     description: project.tagline,
     openGraph: {
       images: project.coverImage
         ? urlFor(project.coverImage.image).width(1200).height(630).url()
         : fallbackImage,
-      url: `https://victoreke.com/projects/${project.slug}`,
+      url: `https://samcux.com/projects/${project.slug}`,
       title: project.name,
       description: project.tagline,
     },
@@ -55,7 +55,7 @@ export default async function Project({ params }: Props) {
       <Slide>
         <div className="max-w-3xl mx-auto">
           <div className="flex items-start justify-between flex-wrap mb-4">
-            <h1 className="font-incognito font-black tracking-tight sm:text-5xl text-3xl mb-4 max-w-md">
+            <h1 className="font-gonzaga font-black tracking-tight sm:text-5xl text-3xl mb-4 max-w-md">
               {project.name}
             </h1>
 

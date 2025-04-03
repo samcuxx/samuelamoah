@@ -39,7 +39,7 @@ export default function Navbar() {
                 <li key={id}>
                   <Link
                     href={link.href}
-                    className="font-incognito dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900 duration-300 text-base"
+                    className="font-gonzaga dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900 duration-300 text-base"
                   >
                     {link.title}
                   </Link>

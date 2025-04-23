@@ -26,7 +26,7 @@ type Props = {
 };
 
 const fallbackImage: string =
-  "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png";
+  "https://res.cloudinary.com/Samuel Amoah/image/upload/v1692636087/Samuel Amoah/blog.png";
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -48,8 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     publisher: post.author.name,
     keywords: post.tags,
     alternates: {
-      canonical:
-        post.canonicalLink || `https://samcux.com/blog/${post.slug}`,
+      canonical: post.canonicalLink || `https://samcux.com/blog/${post.slug}`,
     },
     openGraph: {
       images:

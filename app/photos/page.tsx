@@ -19,15 +19,15 @@ const images = [
 ];
 
 export const metadata: Metadata = {
-  title: "Photos | Victor Eke",
+  title: "Photos | Samuel Amoah",
   metadataBase: new URL("https://samcux.com/photos"),
-  description: "Explore photos taken by Victor Eke",
+  description: "Explore photos taken by Samuel Amoah",
   openGraph: {
-    title: "Photos | Victor Eke",
+    title: "Photos | Samuel Amoah",
     url: "https://samcux.com/photos",
-    description: "Explore photos taken by Victor Eke",
+    description: "Explore photos taken by Samuel Amoah",
     images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692635149/victoreke/photos.png",
+      "https://res.cloudinary.com/Samuel Amoah/image/upload/v1692635149/Samuel Amoah/photos.png",
   },
 };
 
